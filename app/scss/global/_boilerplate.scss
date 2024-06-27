@@ -1,0 +1,74 @@
+@use "./font" as f;
+@use "../util" as *;
+@use "../global/colors" as *;
+
+html {
+  font-size: 100%;
+  &::-webkit-scrollbar {
+    background-color: $green-500;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: rem(20);
+    background-color: $green-400;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: f.$font;
+  font-size: 1.125rem;
+}
+
+.container {
+  max-width: rem(1100);
+  margin: 0 auto;
+  padding-inline: 2%;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f-column {
+  flex-direction: column;
+}
+img,
+video {
+  width: 100%;
+  height: 100%;
+}
+a,
+a:visited,
+a:active {
+  color: unset;
+  text-decoration: none;
+}
+ul,
+ol {
+  margin: 0;
+  list-style: none;
+}
+
+.main-btn,
+.main-btn2 {
+  color: $white;
+  padding: rem(10) rem(32);
+  border: rem(2) solid $white;
+  border-radius: rem(30);
+  background-color: transparent;
+  transition: all 220ms ease;
+  &:hover {
+    filter: invert(1);
+    background-color: #000;
+  }
+}
+.main-btn2 {
+  color: #000;
+  border-color: #000;
+  &:hover {
+    filter: invert(0);
+    color: $white;
+    background-color: #000;
+  }
+}

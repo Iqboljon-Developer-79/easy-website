@@ -1,0 +1,40 @@
+@use "../global/colors" as *;
+@use "../util" as *;
+
+.header {
+  color: $white;
+  padding-block: rem(78);
+  background-color: $green-500;
+  @media (max-width: rem(768)) {
+    padding-block: rem(36);
+  }
+  &__navigations {
+    img {
+      max-width: rem(160);
+    }
+    a:hover {
+      color: antiquewhite;
+    }
+  }
+}
+.header__mobile {
+  inset: 0;
+  left: 200%;
+  background-color: #000000bb;
+  transition: all 200ms ease;
+  .header__mobile-main {
+    padding: rem(100) rem(48);
+    color: $white;
+    background-color: $green-500;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    .close-icon {
+      inset: 4% 4% auto auto;
+    }
+    a:hover {
+      color: antiquewhite;
+    }
+  }
+  &.active {
+    left: 0%;
+  }
+}

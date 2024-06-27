@@ -1,0 +1,22 @@
+@use "../global/colors" as *;
+@use "../util" as *;
+
+.advertisement {
+  padding-block: rem(76);
+  background-color: $coral;
+  h2 {
+    font-weight: bold;
+  }
+  .ad__container {
+    max-width: rem(917);
+  }
+  @media (max-width: rem(450)) {
+    h2 {
+      font-size: rem(36);
+      line-height: rem(36);
+    }
+    button {
+      font-size: rem(14);
+    }
+  }
+}

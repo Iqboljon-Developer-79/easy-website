@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="./dist/styles.css" />
+    <title>Website</title>
+  </head>
+  <body>
+    <header class="header">
+      <div
+        class="header__container container d-flex justify-content-between align-items-center"
+      >
+        <div
+          class="header__navigations d-flex justify-content-center align-items-center gap-5"
+        >
+          <img src="./images/header/myteam.svg" alt="website logo (name)" />
+          <nav class="gap-3 d-none d-sm-flex">
+            <a href="#">home</a>
+            <a href="./about.html">about</a>
+          </nav>
+        </div>
+        <button class="main-btn d-none d-md-block">contact us</button>
+        <i
+          class="fa-solid fa-bars menu-icon d-block d-md-none"
+          onclick="menuOpener()"
+        ></i>
+      </div>
+    </header>
+
+    <div class="header__mobile position-fixed d-flex justify-content-end">
+      <div class="header__mobile-main d-flex flex-column gap-4">
+        <i
+          class="fa-solid fa-x close-icon position-absolute"
+          onclick="menuOpener()"
+        ></i>
+        <nav class="d-flex flex-column gap-3">
+          <a href="#">home</a>
+          <a href="./about.html">about</a>
+        </nav>
+        <button class="main-btn">contact us</button>
+      </div>
+    </div>
+
+    <section class="form">
+      <div
+        class="form__container container d-flex justify-content-between align-items-center gap-3"
+      >
+        <div class="form__info">
+          <div class="form__info--main">
+            <h1 class="small">Contact us</h1>
+            <h3>Ask us about</h3>
+          </div>
+          <div class="form__info--advantages d-grid">
+            <div class="form__info--advantage d-flex align-items-center">
+              <img src="./images/team/team-ad-1.svg" alt="img of person" />
+              <p>The quality of our talent network</p>
+            </div>
+            <div class="form__info--advantage d-flex align-items-center">
+              <img src="./images/team/team-ad-2.svg" alt="img of preferences" />
+              <p>Usage & implementation of our software</p>
+            </div>
+            <div class="form__info--advantage d-flex align-items-center">
+              <img src="./images/team/team-ad-3.svg" alt="img of statistics" />
+              <p>How we help drive innovation</p>
+            </div>
+          </div>
+        </div>
+        <form
+          class="form__wrapper d-flex flex-column align-items-center justify-content-center w-100"
+        >
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email Address" />
+          <input type="text" placeholder="Company Name" />
+          <input type="text" placeholder="Title" />
+          <textarea placeholder="Message"></textarea>
+          <button class="main-btn">submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div
+        class="footer__container container d-flex align-items-center justify-content-between"
+      >
+        <div
+          class="footer__main d-flex align-items-start justify-content-center"
+        >
+          <div
+            class="footer__main--logo-nav d-flex flex-column justify-content-between align-self-stretch"
+          >
+            <img
+              class="footer-logo"
+              src="./images/header/myteam.svg"
+              alt="website logo"
+            />
+            <nav class="footer__nav d-flex gap-3">
+              <a href="#">home</a>
+              <a href="#">about</a>
+            </nav>
+          </div>
+          <div class="footer__links d-flex flex-column">
+            <a href="#">987 Hillcrest Lane</a>
+            <a href="#">Irvine, CA</a>
+            <a href="#">California 92714</a>
+            <a href="#">Call Us : 949-833-7432</a>
+          </div>
+        </div>
+        <div
+          class="footer__socials d-flex flex-column align-items-end justify-content-between align-self-stretch"
+        >
+          <div class="footer__socials-wrapper d-flex gap-3">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <p class="small opacity-75">Copyright 2020. All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <script src="./app/js/script.js"></script>
+  </body>
+</html>

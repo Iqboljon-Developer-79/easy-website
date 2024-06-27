@@ -1,0 +1,33 @@
+@use "../global/colors" as *;
+@use "../util" as *;
+
+.clients {
+  padding-block: rem(140);
+  background-color: $green-700;
+  @media (max-width: rem(880)) {
+    &__wrapper {
+      display: grid !important;
+      grid-template-columns: 2fr 2fr;
+      gap: 2rem !important;
+    }
+  }
+  @media (max-width: rem(460)) {
+    &__wrapper {
+      display: flex !important;
+      flex-direction: column;
+    }
+  }
+  h2 {
+    color: $white;
+  }
+
+  img {
+    margin: 0 auto;
+    flex-shrink: 1;
+    width: auto;
+    height: auto;
+    &:last-child {
+      grid-column: 1 / 3;
+    }
+  }
+}

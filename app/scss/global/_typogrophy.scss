@@ -1,0 +1,32 @@
+@use "../util" as *;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  line-height: 1.1;
+}
+h1 {
+  font-size: rem(100);
+  line-height: rem(100);
+}
+h1.small {
+  font-size: rem(64);
+  line-height: rem(56);
+}
+h2 {
+  font-size: rem(48);
+  line-height: rem(48);
+}
+h3 {
+  font-size: rem(18);
+  line-height: rem(28);
+}
+p {
+  font-size: rem(18);
+  line-height: rem(25);
+  &.small {
+    font-size: rem(15);
+  }
+}

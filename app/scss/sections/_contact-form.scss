@@ -1,0 +1,73 @@
+@use "../global/colors" as *;
+@use "../util" as *;
+
+.form {
+  background-color: $green-500;
+  padding-bottom: rem(120);
+  img {
+    max-width: rem(72);
+  }
+  &__info {
+    h1 {
+      color: $white;
+    }
+    h3 {
+      margin-top: rem(24);
+      font-size: rem(32);
+      color: $coral;
+    }
+    &--advantages {
+      margin-top: rem(32);
+      gap: 0.5rem;
+      .form__info--advantage {
+        gap: 2rem;
+        p {
+          color: $white;
+        }
+      }
+    }
+  }
+  form {
+    max-width: rem(542);
+    input,
+    textarea {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      outline: none;
+      font-size: rem(15);
+      color: $white;
+      background-color: transparent;
+      border-bottom: rem(1) solid $white;
+      &::placeholder {
+        color: $white;
+        opacity: 0.6;
+      }
+    }
+    input {
+    }
+    textarea {
+      resize: none;
+      border-bottom: rem(1) solid $white;
+    }
+    button {
+      margin-top: rem(24);
+      color: #000;
+      background-color: $white;
+      align-self: start;
+      &:hover {
+        color: $white;
+        border-color: #00000000;
+        background-color: $green-700;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        filter: brightness(110%);
+      }
+    }
+  }
+}
+@media (max-width: rem(950)) {
+  .form__container {
+    padding-top: rem(40);
+    flex-direction: column;
+  }
+}
